@@ -1,0 +1,131 @@
+<script type="text/javascript">
+    RED.nodes.registerType("desktop-keyboard-tap", {
+      category: 'desktopkeyboard',
+      color: '#8BBDD9',
+      defaults: {
+        name: { value: '' },
+        keystatic:  { value: '', required: true }
+        
+        
+      },
+      inputs:1,
+      outputs:1,
+      icon: "fa-keyboard-o.png",
+      label: function() {
+          return this.name || "keyTap";
+      },
+      paletteLabel: "keyTap",
+      oneditprepare: function() {
+            if (this.keydynamicType == null) {
+                if (this.keydynamic == "") {
+                    this.keydynamicType = "date";
+                } else {
+                    this.keydynamicType = "str";
+                }
+            } else if (this.keydynamicType === 'string' || this.keydynamicType === 'none') {
+                this.keydynamicType = "str";
+            }
+            $("#node-input-keydynamicType").val(this.keydynamicType);
+
+            $("#node-input-keydynamic").typedInput({
+                default: 'str',
+                typeField: $("#node-input-keydynamicType"),
+                types:['flow','global','msg','str']
+            });
+
+            $("#node-input-keydynamic").typedInput('type',this.keydynamicType);
+
+        }
+      
+    });
+</script>
+
+<script type="text/x-red" data-template-name="desktop-keyboard-tap">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" style="width:70%;" placeholder="Name" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-keystatic"><i class="fa fa-keyboard-o"></i> Key (Static)</label>
+        <select type="boolean" id="node-input-keystatic" style="width:70%;">
+            <option value="none">Don't use this field.</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+            <option value="f">f</option>
+            <option value="g">g</option>
+            <option value="h">h</option>
+            <option value="i">i</option>
+            <option value="j">j</option>
+            <option value="k">k</option>
+            <option value="l">l</option>
+            <option value="m">m</option>
+            <option value="n">n</option>
+            <option value="o">o</option>
+            <option value="p">p</option>
+            <option value="q">q</option>
+            <option value="r">r</option>
+            <option value="s">s</option>
+            <option value="t">t</option>
+            <option value="u">u</option>
+            <option value="v">v</option>
+            <option value="w">w</option>
+            <option value="x">x</option>
+            <option value="y">y</option>
+            <option value="z">z</option>
+            <option value="backspace">Backspace</option>
+            <option value="delete">Delete</option>
+            <option value="enter">Enter</option>
+            <option value="tab">Tab</option>
+            <option value="escape">Escape</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="home">Home</option>
+            <option value="end">End</option>
+            <option value="pageup">Page Up</option>
+            <option value="pagedown">Page Down</option>
+            <option value="space">Space</option>
+            <option value="command">Command</option>
+            <option value="alt">Alt</option>
+            <option value="control">Control</option>
+            <option value="shift">Shift</option>
+            <option value="right_shift">Right Shift</option>
+            <option value="space">Space</option>
+            <option value="f1">F1</option>
+            <option value="f2">F2</option>
+            <option value="f3">F3</option>
+            <option value="f4">F4</option>
+            <option value="f5">F5</option>
+            <option value="f6">F6</option>
+            <option value="f7">F7</option>
+            <option value="f8">F8</option>
+            <option value="f9">F9</option>
+            <option value="f10">F10</option>
+            <option value="f11">F11</option>
+            <option value="f12">F12</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-keydynamic"><i class="fa fa-envelope"></i> <span data-i18n="common.label.keydynamic"></span></label>
+        <input type="text" id="node-input-keydynamic" style="width:70%">
+        <input type="hidden" id="node-input-keydynamicType">
+    </div>
+   
+</script>
+
+<script type="text/x-red" data-help-name="desktop-keyboard-tap">
+</script>

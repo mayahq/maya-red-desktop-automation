@@ -1,0 +1,30 @@
+{
+  "name": "maya-red-desktop-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayahq/maya-red-desktop-automation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mayahq/maya-red-desktop-automation"
+  },
+  "keywords": [
+    "desktop automation",
+    "robotjs"
+  ],
+  "node-red": {
+    "nodes": {
+      "desktop-keyboard-tap": "desktop/keyboard/keyTap.js"
+    }
+  },
+  "dependencies": {
+    "robotjs": "^0.6.0"
+  }
+}
