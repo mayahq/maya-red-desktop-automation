@@ -9,6 +9,7 @@ module.exports = function (RED) {
     //modifying code here
     this.on("input", function (msg) {
       console.log(this.text);
+
       clipboard.copy(this.text, function (error) {
         if (error) {
           node.status({

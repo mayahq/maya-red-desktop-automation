@@ -15,7 +15,7 @@ module.exports = function (RED) {
     oneditprepare: function oneditprepare() {
       $("#node-input-name").val(this.name);
       $("#node-input-keystatic").val(this.keystatic);
-      $('#node-input-keydynamic').val(this.keydynamic);
+      $("#node-input-keydynamic").val(this.keydynamic);
     }
   }
   RED.nodes.registerType("desktop-keyboard-tap", DesktopKeyboardTap);
