@@ -26,7 +26,7 @@ module.exports = function (RED) {
     }
   }
   RED.nodes.registerType(
-    "desktop-keyboard-copy-selected",
+    "desktop-clipboard-copy-selected",
     DesktopKeyboardCopySelected
   );
 };

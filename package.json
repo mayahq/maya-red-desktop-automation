@@ -21,10 +21,11 @@
   ],
   "node-red": {
     "nodes": {
-      "desktop-keyboard-copy-selected": "desktop/clipboard/copy-selected.js",
-      "desktop-keyboard-paste-into": "desktop/clipboard/paste-into.js",
-      "desktop-keyboard-add": "desktop/clipboard/add.js",
-      "desktop-keyboard-get": "desktop/clipboard/get.js"
+      "desktop-clipboard-copy-selected": "desktop/clipboard/copy-selected.js",
+      "desktop-clipboard-paste-into": "desktop/clipboard/paste-into.js",
+      "desktop-clipboard-add": "desktop/clipboard/add.js",
+      "desktop-clipboard-get": "desktop/clipboard/get.js",
+      "desktop-keyboard-tap": "desktop/keyboard/keyTap.js"
     }
   },
   "dependencies": {

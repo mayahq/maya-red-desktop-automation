@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('desktop-keyboard-get', {
+    RED.nodes.registerType('desktop-clipboard-get', {
       category: 'clipboard',
       color: '#8BBDD9',
       defaults: {
@@ -16,7 +16,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="desktop-keyboard-get">
+<script type="text/x-red" data-template-name="desktop-clipboard-get">
   
   <div class="form-row">
       <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
@@ -26,7 +26,7 @@
 <div class="form-tips" data-i18n="[html]inject.tip"></div>
 </script>
 
-<script type="text/x-red" data-help-name="desktop-keyboard-get">
+<script type="text/x-red" data-help-name="desktop-clipboard-get">
     <p>Get and emit last copied text from clipboard.</p>
     <p>Outputs to <code>msg.clipboard</code></p>
 </script>

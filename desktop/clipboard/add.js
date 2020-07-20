@@ -9,6 +9,7 @@ module.exports = function (RED) {
     //modifying code here
     this.on("input", function (msg) {
       console.log(this.text);
+
       clipboard.copy(this.text, function (error) {
         if (error) {
           node.status({
@@ -18,7 +19,7 @@ module.exports = function (RED) {
           });
         } else {
           node.status({
-            fill: "greed",
+            fill: "green",
             shape: "ring",
             text: "added to clipboard!",
           });
@@ -31,5 +32,5 @@ module.exports = function (RED) {
       $("#node-input-text").val(this.text);
     }
   }
-  RED.nodes.registerType("desktop-keyboard-add", DesktopClipboardAdd);
+  RED.nodes.registerType("desktop-clipboard-add", DesktopClipboardAdd);
 };
