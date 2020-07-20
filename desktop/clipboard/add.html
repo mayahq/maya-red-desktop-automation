@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('desktop-keyboard-add', {
+      category: 'clipboard',
+      color: '#8BBDD9',
+      defaults: {
+        name: { value: '' },
+        text: {value:"", required : true},
+      },
+      inputs:1,
+      outputs:1,
+      icon: "fa-keyboard-o.png",
+      label: function() {
+          return this.name || "clipboard-add";
+      },
+      paletteLabel: "clipboard-add",
+      
+    });
+</script>
+
+<script type="text/x-red" data-template-name="desktop-keyboard-add">
+  
+  <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" style="width:70%;" placeholder="Name" />
+  </div>
+  <div class="form-row">
+      <label for="node-input-text"><i class="fa fa-tag"></i> Text</label>
+      <input type="text" id="node-input-text" style="width:70%;" placeholder="Text" />
+  </div>
+
+<div class="form-tips" data-i18n="[html]inject.tip"></div>
+</script>
+
+<script type="text/x-red" data-help-name="desktop-keyboard-add">
+    <p>Add given text to clipboard.</p>
+</script>

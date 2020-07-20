@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType("desktop-keyboard-paste-into", {
+    RED.nodes.registerType("keyboard-paste-into", {
       category: 'clipboard',
       color: '#8BBDD9',
       defaults: {
@@ -15,7 +15,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="desktop-keyboard-paste-into">
+<script type="text/x-red" data-template-name="keyboard-paste-into">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" style="width:70%;" placeholder="Name" />
@@ -23,7 +23,7 @@
     
 </script>
 
-<script type="text/x-red" data-help-name="desktop-keyboard-paste-into">
-    <p>Pastes text from the clipboard into focused text area.</p>
+<script type="text/x-red" data-help-name="keyboard-paste-into">
+    <p>Ctrl/Cmd + V from the clipboard into focused text area.</p>
     <p>This presses ctr/cmd + v on your behalf and pastes last text in your clipboard into focused textarea.</p>
 </script>

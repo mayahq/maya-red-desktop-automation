@@ -15,22 +15,10 @@ module.exports = function (RED) {
         text: "copying",
       });
       robot.keyTap("c", ["command"]);
-      clipboard.paste(function (err, p) {
-        if (err) {
-          node.status({
-            fill: "red",
-            shape: "ring",
-            text: "error: " + err.toString().substring(0, 10) + "...",
-          });
-        } else {
-          node.status({
-            fill: "greed",
-            shape: "ring",
-            text: "copied!",
-          });
-          msg.copied = p;
-          node.send(msg);
-        }
+      node.status({
+        fill: "green",
+        shape: "dot",
+        text: "copied!",
       });
     });
     oneditprepare: function oneditprepare() {
