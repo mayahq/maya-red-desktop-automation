@@ -19,7 +19,7 @@ module.exports = function (RED) {
           });
         } else {
           node.status({
-            fill: "greed",
+            fill: "green",
             shape: "ring",
             text: "added to clipboard!",
           });
