@@ -1,7 +1,7 @@
 var robot = require("robotjs");
 var clipboard = require("copy-paste");
 module.exports = function (RED) {
-  function DesktopKeyboardCopy(config) {
+  function DesktopKeyboardCopySelected(config) {
     RED.nodes.createNode(this, config);
     this.name = config.name;
 
@@ -37,5 +37,8 @@ module.exports = function (RED) {
       $("#node-input-name").val(this.name);
     }
   }
-  RED.nodes.registerType("desktop-keyboard-copy", DesktopKeyboardCopy);
+  RED.nodes.registerType(
+    "desktop-keyboard-copy-selected",
+    DesktopKeyboardCopySelected
+  );
 };

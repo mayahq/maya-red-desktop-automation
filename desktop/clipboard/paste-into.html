@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType("desktop-keyboard-paste-into", {
+      category: 'clipboard',
+      color: '#8BBDD9',
+      defaults: {
+        name: { value: '' },
+      },
+      inputs:1,
+      outputs:1,
+      icon: "fa-keyboard-o.png",
+      label: function() {
+          return this.name || "paste-into";
+      },
+      paletteLabel: "paste-into",
+    });
+</script>
+
+<script type="text/x-red" data-template-name="desktop-keyboard-paste-into">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" style="width:70%;" placeholder="Name" />
+    </div>
+    
+</script>
+
+<script type="text/x-red" data-help-name="desktop-keyboard-paste-into">
+    <p>Pastes text from the clipboard into focused text area.</p>
+    <p>This presses ctr/cmd + v on your behalf and pastes last text in your clipboard into focused textarea.</p>
+</script>

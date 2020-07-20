@@ -22,7 +22,7 @@
   "node-red": {
     "nodes": {
       "desktop-keyboard-tap": "desktop/keyboard/keyTap.js",
-      "desktop-keyboard-copy": "desktop/keyboard/copy.js"
+      "desktop-keyboard-copy-selected": "desktop/clipboard/copy-selected.js"
     }
   },
   "dependencies": {
