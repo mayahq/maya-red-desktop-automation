@@ -26,7 +26,7 @@ module.exports = function (RED) {
     }
   }
   RED.nodes.registerType(
-    "desktop-keyboard-paste-into",
+    "desktop-clipboard-paste-into",
     DesktopKeyboardPasteInto
   );
 };

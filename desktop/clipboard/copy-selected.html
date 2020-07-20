@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType("desktop-keyboard-copy-selected", {
+    RED.nodes.registerType("desktop-clipboard-copy-selected", {
       category: 'clipboard',
       color: '#8BBDD9',
       defaults: {
@@ -15,7 +15,7 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="desktop-keyboard-copy-selected">
+<script type="text/x-red" data-template-name="desktop-clipboard-copy-selected">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" style="width:70%;" placeholder="Name" />
@@ -23,7 +23,7 @@
     
 </script>
 
-<script type="text/x-red" data-help-name="desktop-keyboard-copy-selected">
+<script type="text/x-red" data-help-name="desktop-clipboard-copy-selected">
     <p>Ctrl/Cmd + C text that you've highlighted into clipboard.</p>
     <p>This presses ctr/cmd + c on your behalf and copies the text you've highlighted into your clipboard, along with emitting it as <code>msg.copied</code> 
     to be accessed in the output.</p>

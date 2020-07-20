@@ -27,5 +27,5 @@ module.exports = function (RED) {
       });
     });
   }
-  RED.nodes.registerType("desktop-keyboard-get", DesktopClipboardGet);
+  RED.nodes.registerType("desktop-clipboard-get", DesktopClipboardGet);
 };

@@ -31,5 +31,5 @@ module.exports = function (RED) {
       $("#node-input-text").val(this.text);
     }
   }
-  RED.nodes.registerType("desktop-keyboard-add", DesktopClipboardAdd);
+  RED.nodes.registerType("desktop-clipboard-add", DesktopClipboardAdd);
 };
