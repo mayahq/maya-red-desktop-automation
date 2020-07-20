@@ -3,7 +3,7 @@ module.exports = function (RED) {
   function DesktopClipboardGet(config) {
     RED.nodes.createNode(this, config);
     // this.text = config.text
-    this.text = config.text;
+
     var node = this;
 
     //modifying code here
@@ -26,9 +26,6 @@ module.exports = function (RED) {
         }
       });
     });
-    oneditprepare: function oneditprepare() {
-      $("#node-input-text").val(this.text);
-    }
   }
   RED.nodes.registerType("desktop-keyboard-get", DesktopClipboardGet);
 };
