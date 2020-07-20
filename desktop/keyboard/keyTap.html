@@ -4,9 +4,9 @@
       color: '#8BBDD9',
       defaults: {
         name: { value: '' },
-        keystatic:  { value: '', required: true }
-        
-        
+        keystatic:  { value: '', required: true },
+        keydynamic: {value:"", validate: RED.validators.typedInput("keydynamicType")},
+        keydynamicType: {value:"global"},
       },
       inputs:1,
       outputs:1,
